@@ -63,7 +63,7 @@ export default function Wisdom() {
         <header className="mw-head" data-reveal>
           <p className="mw-kick">
             <i aria-hidden="true" />
-            <span>A sanctuary in Bilekahalli</span>
+            <span>Our Sanctuaries in Bangalore</span>
             <i aria-hidden="true" />
           </p>
           <h2 className="mw-title">

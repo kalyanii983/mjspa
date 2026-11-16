@@ -1,0 +1,252 @@
+/* ===== MJ Spa: "Why choose" + "Treatment journey" =====
+   Delete your old rules for: .grid3, .feat, .ic, .timeline, .tl-line, .num
+   (inside these two sections) and paste this file in their place. */
+
+.sec.why,
+.sec.journey {
+    --gold: #D9A441;
+    --gold-soft: #F0C46A;
+    --cream: #FFF8EE;
+    --brown: #4A2E1B;
+    --ink: #2A170B;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* ---------- Why choose: leaf-shaped tiles in three colours ---------- */
+.sec .grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.sec .grid3 .feat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 230px;
+    padding: 26px 22px 28px;
+    border: 1.5px solid transparent;
+    border-radius: 34px 6px 34px 6px;
+    /* leaf shape */
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: background-color .25s, border-color .25s;
+}
+
+.sec .grid3 .feat:nth-child(even) {
+    border-radius: 6px 34px 6px 34px;
+}
+
+.sec .feat .ic {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 6px;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.sec .feat h3 {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.sec .feat p {
+    margin: 0;
+    max-width: 28ch;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+/* colour 1: gold */
+.sec .feat:nth-child(3n+1) {
+    background: var(--gold);
+}
+
+.sec .feat:nth-child(3n+1) .ic {
+    background: var(--ink);
+    color: var(--gold-soft);
+}
+
+.sec .feat:nth-child(3n+1) h3,
+.sec .feat:nth-child(3n+1) p {
+    color: var(--ink);
+}
+
+/* colour 2: cream */
+.sec .feat:nth-child(3n+2) {
+    background: var(--cream);
+}
+
+.sec .feat:nth-child(3n+2) .ic {
+    background: #B8791B;
+    color: var(--cream);
+}
+
+.sec .feat:nth-child(3n+2) h3 {
+    color: #3B2415;
+}
+
+.sec .feat:nth-child(3n+2) p {
+    color: #5A3A25;
+}
+
+/* colour 3: warm brown with gold outline */
+.sec .feat:nth-child(3n) {
+    background: var(--brown);
+    border-color: var(--gold);
+}
+
+.sec .feat:nth-child(3n) .ic {
+    background: var(--gold);
+    color: var(--ink);
+}
+
+.sec .feat:nth-child(3n) h3 {
+    color: #F7DFAE;
+}
+
+.sec .feat:nth-child(3n) p {
+    color: #F3E4CC;
+}
+
+.sec .feat:hover {
+    border-color: var(--ink);
+}
+
+.sec .feat:nth-child(3n):hover {
+    border-color: var(--gold-soft);
+    background: #573520;
+}
+
+/* ---------- Journey: cream pills that climb like steps ---------- */
+.sec .timeline {
+    --step: 28px;
+    display: grid;
+    gap: 14px;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 20px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.sec .timeline::before,
+.sec .timeline li::before {
+    content: none;
+}
+
+/* kills old connecting line */
+
+.sec .timeline li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 0 calc(var(--i) * var(--step));
+    padding: 14px 28px 14px 14px;
+    background: var(--cream);
+    border: 1.5px solid var(--gold);
+    border-radius: 48px;
+    box-sizing: border-box;
+}
+
+.sec .timeline .num {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--brown);
+    color: var(--gold-soft);
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.sec .timeline h3 {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #3B2415;
+}
+
+.sec .timeline p {
+    margin: 3px 0 0;
+    font-size: 14.5px;
+    line-height: 1.45;
+    color: #5A3A25;
+}
+
+/* ---------- Tablet / phone ---------- */
+@media (max-width: 860px) {
+    .sec .grid3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 520px) {
+    .sec .grid3 {
+        padding: 0 16px;
+    }
+
+    .sec .grid3 .feat {
+        min-height: 196px;
+        padding: 20px 16px 22px;
+        border-radius: 28px 5px 28px 5px;
+    }
+
+    .sec .grid3 .feat:nth-child(even) {
+        border-radius: 5px 28px 5px 28px;
+    }
+
+    .sec .feat .ic {
+        width: 46px;
+        height: 46px;
+        font-size: 22px;
+    }
+
+    .sec .feat h3 {
+        font-size: 22px;
+    }
+
+    .sec .feat p {
+        font-size: 14px;
+    }
+
+    .sec .timeline {
+        --step: 14px;
+        padding: 0 16px;
+    }
+
+    .sec .timeline li {
+        padding-right: 20px;
+    }
+
+    .sec .timeline h3 {
+        font-size: 21px;
+    }
+
+    .sec .timeline p {
+        font-size: 13.5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sec .feat {
+        transition: none;
+    }
+}

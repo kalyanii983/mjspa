@@ -1,0 +1,315 @@
+.mjf {
+    --mjf-gold: #e2bb6c;
+    --mjf-gold-hover: #efcb84;
+    --mjf-cream: #fbf1dd;
+    --mjf-text: #ecdcc0;
+    --mjf-muted: #c9ae85;
+    --mjf-dark: #2e1a0c;
+    --mjf-card: rgba(255, 226, 170, 0.09);
+    --mjf-line: rgba(226, 187, 108, 0.35);
+
+    position: relative;
+    overflow: hidden;
+    color: var(--mjf-text);
+    padding: 64px 24px 28px;
+    font-family: inherit;
+    background:
+        radial-gradient(circle at 85% 8%, rgba(255, 190, 100, 0.32) 0%, transparent 38%),
+        radial-gradient(circle at 10% 90%, rgba(255, 170, 80, 0.16) 0%, transparent 40%),
+        linear-gradient(160deg, #3a2210 0%, #6b4220 45%, #2f1b0d 100%);
+}
+
+/* Footer logo size */
+.mjf .mjf-logo,
+.mjf .foot-logo-img {
+    height: clamp(44px, 5vw, 60px) !important;
+    width: auto !important;
+    max-width: 180px !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 14px;
+    filter: brightness(1.1) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+.mjf .fl {
+    position: absolute;
+    left: 2%;
+    top: 0;
+    height: 280px;
+    opacity: 0.22;
+    pointer-events: none;
+}
+
+/* ---------- Call to action ---------- */
+.mjf-cta {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mjf .foot-logo-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.mjf-kick {
+    margin: 0 0 12px;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--mjf-gold);
+}
+
+.mjf-title {
+    margin: 0 0 10px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    color: var(--mjf-cream);
+    text-shadow: 0 2px 18px rgba(30, 15, 5, 0.45);
+}
+
+.mjf-sub {
+    margin: 0 0 26px;
+    font-size: 0.95rem;
+    color: var(--mjf-text);
+}
+
+.mjf-btns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.mjf-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 30px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.mjf-btn:hover {
+    transform: translateY(-2px);
+}
+
+.mjf-btn-gold {
+    background: var(--mjf-gold);
+    color: var(--mjf-dark);
+    border: 1px solid var(--mjf-gold);
+}
+
+.mjf-btn-gold:hover {
+    background: var(--mjf-gold-hover);
+}
+
+.mjf-btn-ghost {
+    background: rgba(46, 26, 12, 0.35);
+    color: var(--mjf-cream);
+    border: 1px solid var(--mjf-gold);
+}
+
+.mjf-btn-ghost:hover {
+    background: rgba(46, 26, 12, 0.6);
+}
+
+/* ---------- Dividers ---------- */
+.mjf-divider {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    height: 1px;
+    margin: 44px auto 40px;
+    background: linear-gradient(90deg, transparent, var(--mjf-line) 20%, var(--mjf-line) 80%, transparent);
+}
+
+/* ---------- Grid ---------- */
+.mjf-grid {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2.2fr 1fr 1.2fr;
+    gap: 40px;
+}
+
+.mjf-label {
+    margin: 0 0 16px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mjf-gold);
+}
+
+.mjf-label-gap {
+    margin-top: 28px;
+}
+
+/* Branch cards */
+.mjf-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.mjf-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--mjf-card);
+    border: 1px solid var(--mjf-line);
+    border-radius: 14px;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.mjf-card:hover {
+    border-color: var(--mjf-gold);
+    background: rgba(255, 226, 170, 0.14);
+    transform: translateY(-2px);
+}
+
+.mjf-card h5 {
+    margin: 0 0 10px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--mjf-cream);
+}
+
+.mjf-card address {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: var(--mjf-text);
+}
+
+.mjf-map {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--mjf-gold);
+    text-decoration: none;
+}
+
+.mjf-map:hover {
+    color: var(--mjf-gold-hover);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Link columns */
+.mjf-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mjf-links a {
+    color: var(--mjf-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    width: fit-content;
+    background: linear-gradient(var(--mjf-gold), var(--mjf-gold)) left bottom / 0 1px no-repeat;
+    transition: color 0.2s ease, background-size 0.25s ease;
+}
+
+.mjf-links a:hover {
+    color: var(--mjf-gold-hover);
+    background-size: 100% 1px;
+}
+
+.mjf-icon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mjf-icon-link svg,
+.mjf-hours svg {
+    color: var(--mjf-gold);
+    flex-shrink: 0;
+}
+
+.mjf-hours {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--mjf-text);
+}
+
+/* ---------- Bottom ---------- */
+.mjf-quote {
+    position: relative;
+    z-index: 1;
+    margin: 48px 0 0;
+    text-align: center;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--mjf-cream);
+}
+
+.mjf-copy {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--mjf-muted);
+}
+
+.mjf .mjf-divider:last-of-type {
+    margin: 28px auto 18px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+    .mjf-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mjf-branches {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .mjf {
+        padding: 48px 18px 24px;
+    }
+
+    .mjf-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .mjf-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .mjf-btn {
+        width: 100%;
+    }
+}
